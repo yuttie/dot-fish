@@ -6,5 +6,5 @@ end
 
 # https://bugs.funtoo.org/browse/FL-2006
 if status --is-interactive
-    keychain --eval --quiet -Q id_rsa | source
+    keychain --eval --quiet --quick id_ed25519 id_rsa_4096 | source
 end
