@@ -22,14 +22,11 @@ set -Ux BC_ENV_ARGS "--mathlib $HOME/.bc"
 set -Ux PYTHONSTARTUP "$HOME/.pythonstartup"
 set -Ux RUST_SRC_PATH "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 # Node.js
-begin
-  set -U NPM_PACKAGES "$HOME/.npm-packages"
-
-  test -d "$NPM_PACKAGES"; or mkdir -p "$NPM_PACKAGES"
-  grep 'prefix = ' ~/.npmrc >/dev/null; or echo 'prefix = ~/.npm-packages' >>~/.npmrc
-
-  set -U fish_user_paths "$NPM_PACKAGES/bin" $fish_user_paths
-end
+set -l NPM_PACKAGES "$HOME/.npm-packages"
+test -d "$NPM_PACKAGES"; or mkdir -p "$NPM_PACKAGES"
+grep 'prefix = ' ~/.npmrc >/dev/null; or echo 'prefix = ~/.npm-packages' >>~/.npmrc
+set -U fish_user_paths "$NPM_PACKAGES/bin" $fish_user_paths
+set -Ux NODE_PATH "$NPM_PACKAGES/lib/node_modules"
 
 
 # Others
