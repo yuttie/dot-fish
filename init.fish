@@ -44,3 +44,5 @@ fisher install \
     oh-my-fish/theme-bobthefish \
     fisherman/done \
     fisherman/fzf
+
+__fzf_install
