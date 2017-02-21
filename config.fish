@@ -1,4 +1,6 @@
 set fish_greeting
+set -g fish_prompt_pwd_dir_length 0
+set -g theme_color_scheme terminal2
 
 if status --is-login
   set PATH $PATH /usr/bin /sbin
