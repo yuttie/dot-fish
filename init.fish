@@ -29,6 +29,12 @@ set -U fish_user_paths "$NPM_PACKAGES/bin" $fish_user_paths
 set -Ux NODE_PATH "$NPM_PACKAGES/lib/node_modules"
 
 
+# Plugins
+set -U FZF_LEGACY_KEYBINDINGS 1
+set -U FZF_FIND_AND_EXECUTE_OPTS '--exact'
+set -U FZF_REVERSE_ISEARCH_OPTS '--exact'
+
+
 # Others
 set -Ux DICTIONARY 'en_US'
 set -Ux FZF_DEFAULT_OPTS '--color=dark,fg:-1,bg:-1,hl:1,fg+:15,bg+:8,hl+:1'
