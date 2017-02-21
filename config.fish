@@ -14,9 +14,11 @@ else
 end
 
 # Key bindings
-bind \ex '__fzf_find_and_execute'
-bind \ed '__fzf_cd'
-bind \eD '__fzf_cd_with_hidden'
+function fish_user_key_bindings
+  bind \ex '__fzf_find_and_execute'
+  bind \ed '__fzf_cd'
+  bind \eD '__fzf_cd_with_hidden'
+end
 
 # https://bugs.funtoo.org/browse/FL-2006
 if status --is-interactive
