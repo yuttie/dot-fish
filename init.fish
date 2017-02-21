@@ -31,9 +31,16 @@ set -Ux NODE_PATH "$NPM_PACKAGES/lib/node_modules"
 
 # Others
 set -Ux DICTIONARY 'en_US'
-set -Ux FZF_DEFAULT_OPTS '--color=dark,fg:-1,bg:-1,hl:161,fg+:-1,bg+:7,hl+:161'
+set -Ux FZF_DEFAULT_OPTS '--color=dark,fg:-1,bg:-1,hl:1,fg+:15,bg+:8,hl+:1'
 
 
 # Use default values
 set -eU GREP_COLOR
 set -eU GREP_COLORS
+
+
+# Install plugins
+fisher install \
+    oh-my-fish/theme-bobthefish \
+    fisherman/done \
+    fisherman/fzf
