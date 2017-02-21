@@ -27,7 +27,7 @@ begin
   set -U NPM_PACKAGES "$HOME/.npm-packages"
 
   test -d "$NPM_PACKAGES"; or mkdir -p "$NPM_PACKAGES"
-  grep 'prefix = ' ~/.npmrc >/dev/null; or echo 'prefix = ${HOME}/.npm-packages' >>~/.npmrc
+  grep 'prefix = ' ~/.npmrc >/dev/null; or echo 'prefix = ~/.npm-packages' >>~/.npmrc
 
   set -U fish_user_paths "$NPM_PACKAGES/bin" $fish_user_paths
 end
