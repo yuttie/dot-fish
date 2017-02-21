@@ -2,7 +2,6 @@
 set -U fish_user_paths \
     ~/.gem/ruby/2.3.0/bin \
     ~/.cargo/bin \
-    $NPM_PACKAGES/bin \
     ~/.local/bin
 
 
