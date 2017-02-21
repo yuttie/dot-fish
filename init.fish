@@ -46,3 +46,7 @@ fisher install \
     fisherman/fzf
 
 __fzf_install
+
+
+# Generate completions from man pages
+fish_update_completions
