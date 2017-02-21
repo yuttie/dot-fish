@@ -13,6 +13,11 @@ else
   eval (dircolors -c /etc/DIR_COLORS)
 end
 
+# Key bindings
+bind \ex '__fzf_find_and_execute'
+bind \ed '__fzf_cd'
+bind \eD '__fzf_cd_with_hidden'
+
 # https://bugs.funtoo.org/browse/FL-2006
 if status --is-interactive
   keychain --eval --quiet --quick id_ed25519 id_rsa_4096 | source
