@@ -6,6 +6,12 @@ if status --is-login
   set PATH $PATH /usr/bin /sbin
 end
 
+if test -f ~/.dir_colors
+  eval (dircolors -c ~/.dir_colors)
+else
+  eval (dircolors -c /etc/DIR_COLORS)
+end
+
 # https://bugs.funtoo.org/browse/FL-2006
 if status --is-interactive
   keychain --eval --quiet --quick id_ed25519 id_rsa_4096 | source
