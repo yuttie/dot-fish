@@ -1,10 +1,3 @@
-# Paths
-set -U fish_user_paths \
-    ~/.gem/ruby/2.3.0/bin \
-    ~/.cargo/bin \
-    ~/.local/bin
-
-
 # Colors
 set -Ux GROFF_NO_SGR 1
 
@@ -18,15 +11,27 @@ set -Ux LESS_TERMCAP_ue \e'[0m'          # end underline
 
 
 # Programming tools
+set -l additional_paths
 set -Ux BC_ENV_ARGS "--mathlib $HOME/.bc"
 set -Ux PYTHONSTARTUP "$HOME/.pythonstartup"
 set -Ux RUST_SRC_PATH "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+set -l additional_paths ~/.gem/ruby/*/bin $additional_paths
+set -l additional_paths ~/.cargo/bin $additional_paths
 # Node.js
 set -l NPM_PACKAGES "$HOME/.npm-packages"
 test -d "$NPM_PACKAGES"; or mkdir -p "$NPM_PACKAGES"
 grep 'prefix = ' ~/.npmrc >/dev/null; or echo 'prefix = ~/.npm-packages' >>~/.npmrc
-set -U fish_user_paths "$NPM_PACKAGES/bin" $fish_user_paths
+set -l additional_paths "$NPM_PACKAGES/bin" $additional_paths
 set -Ux NODE_PATH "$NPM_PACKAGES/lib/node_modules"
+
+
+# Paths
+set -U fish_user_paths ~/.local/bin
+for d in $additional_paths
+  if test -d $d
+    set -U fish_user_paths "$d" $fish_user_paths
+  end
+end
 
 
 # Plugins
