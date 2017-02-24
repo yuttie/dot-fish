@@ -15,6 +15,8 @@ end
 
 # Key bindings
 function fish_user_key_bindings
+  fish_vi_key_bindings
+
   bind \ct '__fzf_find_file'
   bind \cr '__fzf_reverse_isearch'
   bind \ex '__fzf_find_and_execute'
