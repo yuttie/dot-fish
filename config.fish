@@ -1,6 +1,4 @@
 set fish_greeting
-set -g fish_prompt_pwd_dir_length 0
-set -g theme_color_scheme terminal2
 
 # Set variables as global instead of universal because they have system-wide values
 set -gx EDITOR nvim
@@ -14,6 +12,10 @@ else
 end
 
 if status --is-interactive
+  # Theme
+  set -g fish_prompt_pwd_dir_length 0
+  set -g theme_color_scheme terminal2
+
   # Key bindings
   function fish_user_key_bindings
     bind \ct '__fzf_find_file'
