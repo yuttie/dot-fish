@@ -36,6 +36,7 @@ if status --is-interactive
   end
   fish_hybrid_key_bindings
 
+  # Keychain
   # https://bugs.funtoo.org/browse/FL-2006
   keychain --eval --quiet --quick id_ed25519 id_rsa_4096 | source
 end
