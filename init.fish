@@ -46,6 +46,8 @@ set -U FZF_REVERSE_ISEARCH_OPTS '--exact'
 set -Ux DICTIONARY 'en_US'
 set -Ux FZF_DEFAULT_OPTS '--color=dark,fg:-1,bg:-1,hl:1,fg+:15,bg+:8,hl+:1'
 
+# For note taking
+set -U NOTE_PATH_TEMPLATE '~/Notes/notes-%Y-%m-%d.rst'
 
 # Use default values
 set -eU GREP_COLOR
