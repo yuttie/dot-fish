@@ -1,4 +1,4 @@
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 # Colors
 set -Ux GROFF_NO_SGR 1
