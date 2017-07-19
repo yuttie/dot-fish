@@ -19,6 +19,7 @@ set -Ux PYTHONSTARTUP "$HOME/.pythonstartup"
 set -Ux RUST_SRC_PATH "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 set -l additional_paths ~/.gem/ruby/*/bin $additional_paths
 set -l additional_paths ~/.cargo/bin $additional_paths
+set -l additional_paths /usr/share/git/diff-highlight $additional_paths
 # Node.js
 set -l NPM_PACKAGES "$HOME/.npm-packages"
 test -d "$NPM_PACKAGES"; or mkdir -p "$NPM_PACKAGES"
