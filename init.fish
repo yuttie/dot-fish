@@ -46,6 +46,7 @@ set -U FZF_REVERSE_ISEARCH_OPTS '--exact'
 # Others
 set -Ux DICTIONARY 'en_US'
 set -Ux FZF_DEFAULT_OPTS '--color=dark,fg:-1,bg:-1,hl:1,fg+:15,bg+:8,hl+:1'
+set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 # For note taking
 set -U NOTE_PATH_TEMPLATE '~/Notes/notes-%Y-%m-%d.rst'
