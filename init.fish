@@ -49,7 +49,10 @@ set -Ux FZF_DEFAULT_OPTS '--color=dark,fg:-1,bg:-1,hl:1,fg+:15,bg+:8,hl+:1'
 set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 # For note taking
-set -U NOTE_PATH_TEMPLATE '~/Notes/notes-%Y-%m-%d.rst'
+set -U NOTE_ROOT_DIR "$HOME/Notes"
+set -U NOTE_DEFAULT_EXTENSION '.rst'
+set -U NOTE_DEFAULT_FILENAME 'notes.rst'
+set -U NOTE_DEFAULT_DAILY_FILENAME 'notes-%Y-%m-%d.rst'
 
 # Use default values
 set -eU GREP_COLOR
