@@ -13,7 +13,7 @@ function note
             set fp $path$NOTE_DEFAULT_EXTENSION
         else
             # new file
-            if echo -n $path | grep -q "\\$NOTE_DEFAULT_EXTENSION\$"
+            if echo -n $path | string match -q "*$NOTE_DEFAULT_EXTENSION"
                 set fp $path
             else
                 set fp $path$NOTE_DEFAULT_EXTENSION
