@@ -53,6 +53,7 @@ set -U NOTE_ROOT_DIR "$HOME/Notes"
 set -U NOTE_DEFAULT_EXTENSION '.rst'
 set -U NOTE_DEFAULT_FILENAME 'notes.rst'
 set -U NOTE_DEFAULT_DAILY_FILENAME 'notes-%Y-%m-%d.rst'
+set -U NOTE_COMPLETION_REGEX '.*\.(rst|md|markdown|org|txt|adoc|asciidoc|tex)'
 
 # Use default values
 set -eU GREP_COLOR
