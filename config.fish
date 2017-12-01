@@ -5,10 +5,12 @@ set -gx EDITOR nvim
 set -gx LESS '--RAW-CONTROL-CHARS --ignore-case --chop-long-lines'
 set -gx GPG_TTY (tty)
 
-if test -f ~/.dir_colors
-  eval (dircolors -c ~/.dir_colors)
-else
-  eval (dircolors -c /etc/DIR_COLORS)
+if type -q dircolors
+  if test -f ~/.dir_colors
+    eval (dircolors -c ~/.dir_colors)
+  else
+    eval (dircolors -c /etc/DIR_COLORS)
+  end
 end
 
 if status --is-interactive
