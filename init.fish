@@ -71,3 +71,4 @@ __fzf_install
 
 # Generate completions from man pages
 fish_update_completions
+rustup completions fish > ~/.config/fish/completions/rustup.fish
