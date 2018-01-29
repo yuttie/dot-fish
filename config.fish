@@ -18,7 +18,7 @@ if status --is-interactive
   set -g fish_prompt_pwd_dir_length 1
   set -g theme_display_user yes
   set -g default_user yuta
-  set -g theme_color_scheme terminal2
+  set -g theme_color_scheme terminal-light
 
   # Aliases
   alias vim="nvim"
