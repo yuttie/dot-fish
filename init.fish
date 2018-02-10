@@ -22,6 +22,7 @@ set -l additional_paths ~/.cargo/bin $additional_paths
 set -l additional_paths /usr/share/git/diff-highlight $additional_paths
 set -l additional_paths /usr/local/Cellar/git/2.15.1/share/git-core/contrib/diff-highlight $additional_paths
 set -l additional_paths /Library/TeX/texbin $additional_paths
+set -l additional_paths ~/Library/Python/*/bin $additional_paths
 # Node.js
 set -l NPM_PACKAGES "$HOME/.npm-packages"
 test -d "$NPM_PACKAGES"; or mkdir -p "$NPM_PACKAGES"
