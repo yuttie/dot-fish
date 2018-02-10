@@ -23,7 +23,7 @@ function __fzf_reverse_isearch_zsh
     commandline -f repaint
   end
 
-  tac $fish_cache/decoded_zsh_history-$timestamp | __fzfcmd +s --tiebreak=index --toggle-sort=ctrl-r -q (commandline) $FZF_REVERSE_ISEARCH_OPTS | read -l select
+  tac $fish_cache/decoded_zsh_history-$timestamp | eval (__fzfcmd) +s --tiebreak=index --toggle-sort=ctrl-r -q '(commandline)' $FZF_REVERSE_ISEARCH_OPTS | read -l select
   if not test -z $select
     commandline -rb "$select"
     commandline -f repaint
