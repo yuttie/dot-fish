@@ -16,6 +16,7 @@ set -Ux LESS_TERMCAP_ue \e'[0m'          # end underline
 set -l additional_paths
 set -Ux BC_ENV_ARGS "--mathlib $HOME/.bc"
 set -Ux PYTHONSTARTUP "$HOME/.pythonstartup"
+set -Ux PIPENV_SHELL_FANCY 1
 set -Ux RUST_SRC_PATH "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 set -l additional_paths ~/.gem/ruby/*/bin $additional_paths
 set -l additional_paths ~/.cargo/bin $additional_paths
