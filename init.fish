@@ -43,14 +43,16 @@ end
 
 
 # Plugins
-set -U FZF_LEGACY_KEYBINDINGS 1
-set -U FZF_FIND_AND_EXECUTE_OPTS '--exact'
+set -U FZF_LEGACY_KEYBINDINGS 0
+set -U FZF_DISABLE_KEYBINDINGS 1
+set -U FZF_FIND_FILE_COMMAND "fd --type f . \$dir"
+set -U FZF_FIND_FILE_OPTS '--exact'
 set -U FZF_REVERSE_ISEARCH_OPTS '--exact'
 
 
 # Others
 set -Ux DICTIONARY 'en_US'
-set -Ux FZF_DEFAULT_OPTS '--height=50% --reverse --color=dark,fg:-1,bg:-1,hl:1,fg+:15,bg+:8,hl+:1'
+set -Ux FZF_DEFAULT_OPTS '--height=50% --reverse --color=dark,fg:8,bg:-1,hl:9,fg+:7,bg+:8,hl+:1,info:3,prompt:4,pointer:1,marker:5,spinner:3,header:4'
 set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 
