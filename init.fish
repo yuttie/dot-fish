@@ -13,28 +13,33 @@ set -Ux LESS_TERMCAP_ue \e'[0m'          # end underline
 
 
 # Programming tools
-set -l additional_paths
 set -Ux BC_ENV_ARGS "--mathlib $HOME/.bc"
 set -Ux PYTHONSTARTUP "$HOME/.pythonstartup"
 set -Ux PIPENV_SHELL_FANCY 1
 set -Ux RUST_SRC_PATH "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-set -l additional_paths ~/.fzf/bin $additional_paths
-set -l additional_paths ~/.gem/ruby/*/bin $additional_paths
-set -l additional_paths ~/.cargo/bin $additional_paths
-set -l additional_paths /usr/share/git/diff-highlight $additional_paths
-set -l additional_paths /usr/local/share/git-core/contrib/diff-highlight $additional_paths
-set -l additional_paths /Library/TeX/texbin $additional_paths
-set -l additional_paths ~/Library/Python/*/bin $additional_paths
-# Node.js
-set -l NPM_PACKAGES "$HOME/.npm-packages"
-test -d "$NPM_PACKAGES"; or mkdir -p "$NPM_PACKAGES"
-grep 'prefix = ' ~/.npmrc >/dev/null; or echo 'prefix = ~/.npm-packages' >>~/.npmrc
-set -l additional_paths "$NPM_PACKAGES/bin" $additional_paths
-set -Ux NODE_PATH "$NPM_PACKAGES/lib/node_modules"
 
+# Node.js
+set -l npm_packages "$HOME/.npm-packages"
+set -Ux NODE_PATH "$npm_packages/lib/node_modules"
+test -d "$npm_packages"; or mkdir -p "$npm_packages"
+grep 'prefix = ' ~/.npmrc >/dev/null; or echo 'prefix = ~/.npm-packages' >>~/.npmrc
+set -l additional_paths "$npm_packages/bin" $additional_paths
+
+# Java
+set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 # Paths
-set -U fish_user_paths ~/.local/bin
+set -l additional_paths
+set -l additional_paths ~/.local/bin $additional_paths
+set -l additional_paths ~/.poetry/bin $additional_paths
+set -l additional_paths ~/.cargo/bin $additional_paths
+set -l additional_paths ~/go/bin $additional_paths
+set -l additional_paths ~/.yarn/bin $additional_paths
+set -l additional_paths $npm_packages/bin $additional_paths
+set -l additional_paths ~/.gem/ruby/*/bin $additional_paths
+set -l additional_paths /usr/local/texlive/2020/bin/x86_64-linux $additional_paths
+
+set -U fish_user_paths
 for d in $additional_paths
   if test -d $d
     set -U fish_user_paths "$d" $fish_user_paths
