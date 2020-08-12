@@ -66,11 +66,10 @@ set -eU GREP_COLORS
 
 
 # Install plugins
-fisher install \
-    oh-my-fish/theme-bobthefish \
-    fisherman/done \
-    fisherman/fzf
-fisher up
+fisher add oh-my-fish/theme-bobthefish
+fisher add franciscolourenco/done
+fisher add jethrokuan/fzf
+fisher
 
 
 # Generate completions from man pages
