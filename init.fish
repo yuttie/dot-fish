@@ -53,12 +53,6 @@ set -Ux DICTIONARY 'en_US'
 set -Ux FZF_DEFAULT_OPTS '--height=50% --reverse --color=dark,fg:-1,bg:-1,hl:1,fg+:15,bg+:8,hl+:1'
 set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
-# For note taking
-set -U NOTE_ROOT_DIR "$HOME/Notes"
-set -U NOTE_DEFAULT_EXTENSION '.asciidoc'
-set -U NOTE_DEFAULT_FILENAME 'notes.asciidoc'
-set -U NOTE_DEFAULT_DAILY_FILENAME 'notes-%Y-%m-%d.asciidoc'
-set -U NOTE_COMPLETION_REGEX '.*\.(rst|md|markdown|org|txt|adoc|asciidoc|tex)'
 
 # Use default values
 set -eU GREP_COLOR
