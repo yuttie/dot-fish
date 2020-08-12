@@ -66,9 +66,6 @@ set -eU GREP_COLORS
 
 
 # Install plugins
-fisher add oh-my-fish/theme-bobthefish
-fisher add franciscolourenco/done
-fisher add jethrokuan/fzf
 fisher
 
 
