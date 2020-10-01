@@ -34,7 +34,7 @@ set -l additional_paths ~/.local/bin $additional_paths
 set -l additional_paths ~/.poetry/bin $additional_paths
 set -l additional_paths ~/.cargo/bin $additional_paths
 set -l additional_paths ~/go/bin $additional_paths
-set -l additional_paths ~/.yarn/bin $additional_paths
+set -l additional_paths (yarn global bin) $additional_paths
 set -l additional_paths $npm_packages/bin $additional_paths
 set -l additional_paths ~/.gem/ruby/*/bin $additional_paths
 set -l additional_paths /usr/local/texlive/2020/bin/x86_64-linux $additional_paths
