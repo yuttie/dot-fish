@@ -40,6 +40,12 @@ if status --is-interactive
         bind -M insert \ec '__fzf_cd'
         bind -M insert \eC '__fzf_cd --hidden'
     end
+
+    # My own bindings
+    bind \et 'commandline -i "(date +%Y-%m-%d-%H%M%S)"'
+    if bind -M insert >/dev/null 2>/dev/null
+        bind -M insert \et 'commandline -i "(date +%Y-%m-%d-%H%M%S)"'
+    end
   end
   fish_hybrid_key_bindings
 
