@@ -1,4 +1,4 @@
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 # Colors
 set -Ux GROFF_NO_SGR 1
@@ -67,7 +67,7 @@ set -eU GREP_COLORS
 
 
 # Install plugins
-fisher
+fisher install (cat fish_plugins)
 
 
 # Generate completions from man pages
