@@ -73,7 +73,7 @@ set -eU GREP_COLORS
 
 
 # Install plugins
-fisher install (cat fish_plugins)
+fisher install (cat ~/.config/fish/fish_plugins)
 
 
 # Generate completions from man pages
