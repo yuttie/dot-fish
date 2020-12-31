@@ -29,20 +29,26 @@ set -l additional_paths "$npm_packages/bin" $additional_paths
 set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 # Paths
-set -l additional_paths
-set -l additional_paths ~/.local/bin $additional_paths
-set -l additional_paths ~/.poetry/bin $additional_paths
-set -l additional_paths ~/.cargo/bin $additional_paths
-set -l additional_paths ~/go/bin $additional_paths
-set -l additional_paths (yarn global bin) $additional_paths
-set -l additional_paths $npm_packages/bin $additional_paths
-set -l additional_paths ~/.gem/ruby/*/bin $additional_paths
-set -l additional_paths /usr/local/texlive/2020/bin/x86_64-linux $additional_paths
+set -l prepend_paths \
+    ~/.local/bin \
+    ~/.poetry/bin \
+    ~/.cargo/bin \
+    ~/go/bin \
+    (ls -1d ~/.gem/ruby/*/bin)[-1..1] \
+    /usr/local/texlive/2020/bin/x86_64-linux
+set -l append_paths \
+    (yarn global bin) \
+    $npm_packages/bin
 
 set -U fish_user_paths
-for d in $additional_paths
+for d in $prepend_paths[-1..1]
   if test -d $d
     set -U fish_user_paths "$d" $fish_user_paths
+  end
+end
+for d in $append_paths
+  if test -d $d
+    set -U fish_user_paths $fish_user_paths "$d"
   end
 end
 
