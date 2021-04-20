@@ -2,7 +2,7 @@ set fish_greeting
 
 # Set variables as global instead of universal because they have system-wide values
 set -gx EDITOR nvim
-set -gx LESS '--RAW-CONTROL-CHARS --ignore-case --chop-long-lines'
+set -gx LESS '--RAW-CONTROL-CHARS --ignore-case --chop-long-lines --no-lessopen'
 set -gx GPG_TTY (tty)
 
 if type -q dircolors
