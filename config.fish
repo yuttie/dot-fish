@@ -13,6 +13,9 @@ if type -q dircolors
   end
 end
 
+# Paths
+# NOTE See /etc/env.d/99my-texlive for path settings for TeX Live
+
 if status --is-interactive
   # Theme
   set -g fish_prompt_pwd_dir_length 1
