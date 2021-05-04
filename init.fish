@@ -34,7 +34,6 @@ set -l prepend_paths \
     ~/.poetry/bin \
     ~/.cargo/bin \
     ~/go/bin \
-    (ls -1d ~/.gem/ruby/*/bin)[-1..1] \
     /usr/local/texlive/2020/bin/x86_64-linux
 set -l append_paths \
     (yarn global bin) \
