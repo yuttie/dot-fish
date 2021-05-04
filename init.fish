@@ -34,7 +34,7 @@ set -l prepend_paths \
     ~/.poetry/bin \
     ~/.cargo/bin \
     ~/go/bin \
-    /usr/local/texlive/2020/bin/x86_64-linux
+    /usr/local/texlive/2021/bin/x86_64-linux
 set -l append_paths \
     (yarn global bin) \
     $npm_packages/bin
