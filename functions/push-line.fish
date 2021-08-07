@@ -23,7 +23,7 @@ function push-line
   end
 
   # Push the current commandline
-  set -g fish_buffer_stack $fish_buffer_stack (commandline)
+  set -g fish_buffer_stack $fish_buffer_stack (commandline | string collect)
   # Clear the command line
   commandline ''
   commandline -f repaint
