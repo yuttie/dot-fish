@@ -24,9 +24,6 @@ if status --is-interactive
   set -g theme_color_scheme nord
 
   # Aliases: Neovim
-  alias vim="nvim"
-  alias view="nvim -R"
-  alias vimdiff="nvim -d"
   alias nview="nvim -R"
   alias nvimdiff="nvim -d"
 
