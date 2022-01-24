@@ -58,7 +58,7 @@ if status --is-interactive
 
   # Keychain
   # https://bugs.funtoo.org/browse/FL-2006
-  keychain --eval --quiet --quick id_ed25519 id_rsa_4096 | string replace 'set -x -U' 'set -x -g' | source
+  keychain --eval --quiet --quick id_ed25519 | string replace 'set -x -U' 'set -x -g' | source
 end
 
 starship init fish | source
