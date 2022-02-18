@@ -3,12 +3,12 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 # Colors
 set -Ux GROFF_NO_SGR 1
 
-set -Ux LESS_TERMCAP_mb \e'[01;35m'      # begin blinking
-set -Ux LESS_TERMCAP_md \e'[01;35m'      # begin bold
+set -Ux LESS_TERMCAP_mb \e'[1;35m'       # begin blinking
+set -Ux LESS_TERMCAP_md \e'[1;35m'       # begin bold
 set -Ux LESS_TERMCAP_me \e'[0m'          # end mode
-set -Ux LESS_TERMCAP_so \e'[01;46;37m'   # begin standout-mode - info box
+set -Ux LESS_TERMCAP_so \e'[7m'          # begin standout-mode - info box
 set -Ux LESS_TERMCAP_se \e'[0m'          # end standout-mode
-set -Ux LESS_TERMCAP_us \e'[01;32m'      # begin underline
+set -Ux LESS_TERMCAP_us \e'[4;32m'       # begin underline
 set -Ux LESS_TERMCAP_ue \e'[0m'          # end underline
 
 
