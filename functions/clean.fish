@@ -4,5 +4,5 @@ function clean
     return 1
   end
 
-  find "$argv[1]" -type f \( -name '*~' -o -name 'nohup.out' -o -name '.DS_Store' -o -name '~$*' -o -name 'persp-auto-save*' -o -name '.~*#' \) -exec rm -fv '{}' \;
+  fd -HI -tf '^(.*~|nohup\.out|\.DS_Store|~\$.*|persp-auto-save.*|\.~\*#)$' -x rm -fv \; "$argv[1]"
 end
