@@ -35,6 +35,13 @@ if status --is-interactive
   # Aliases: Color output
   alias ip="ip -color=auto"
 
+  # Aliases: Misc.
+  alias ls="exa"
+  alias ll="exa -al"
+  alias llt="exa -al --sort modified"
+  alias lls="exa -al --sort size"
+  alias xd="od -x"
+
   # Key bindings
   function fish_user_key_bindings
     bind \co '__fzf_find_file'
