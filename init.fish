@@ -59,6 +59,8 @@ set -U FZF_FIND_FILE_COMMAND "fd --type f . \$dir"
 set -U FZF_FIND_FILE_OPTS '--exact'
 set -U FZF_REVERSE_ISEARCH_OPTS '--exact'
 
+set -U __done_exclude 'git (?!push|pull|fetch)|^ '
+
 
 # Others
 set -Ux DICTIONARY 'en_US'
