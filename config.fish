@@ -44,19 +44,9 @@ if status --is-interactive
 
   # Key bindings
   function fish_user_key_bindings
-    bind \co '__fzf_find_file'
-    bind \cr '__fzf_reverse_isearch'
-    bind \er '__fzf_reverse_isearch_zsh'
-    bind \ec '__fzf_cd'
-    bind \eC '__fzf_cd --hidden'
-
-    if bind -M insert >/dev/null 2>/dev/null
-      bind -M insert \co '__fzf_find_file'
-      bind -M insert \cr '__fzf_reverse_isearch'
-      bind -M insert \er '__fzf_reverse_isearch_zsh'
-      bind -M insert \ec '__fzf_cd'
-      bind -M insert \eC '__fzf_cd --hidden'
-    end
+    # fzf
+    source /usr/share/fzf/key-bindings.fish
+    fzf_key_bindings
 
     # My own bindings
     bind \et 'commandline -i "(date +%Y-%m-%d-%H%M%S)"'
