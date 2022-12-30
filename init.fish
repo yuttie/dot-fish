@@ -64,7 +64,7 @@ set -U __done_exclude 'git (?!push|pull|fetch)|^ '
 set -Ux DICTIONARY 'en_US'
 set -Ux FZF_DEFAULT_OPTS '--height=50% --reverse --color=fg:-1,bg:-1,fg+:15,bg+:-1,hl:12,hl+:10,prompt:10,pointer:9,info:13,marker:9,spinner:9,header:9'
 set -Ux FZF_TMUX 1
-set -Ux FZF_TMUX_OPTS '-p'
+set -Ux FZF_TMUX_OPTS '-p 80%'
 set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 
