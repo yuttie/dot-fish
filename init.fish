@@ -59,6 +59,9 @@ end
 # Plugins
 set -U FZF_TMUX 1
 set -U FZF_TMUX_OPTS '-p 80%'
+set -U FZF_CTRL_T_OPTS '--exact'
+set -U FZF_CTRL_R_OPTS '--exact'
+set -U FZF_ALT_C_OPTS '--exact'
 set -U __done_exclude 'git (?!push|pull|fetch)|^ '
 
 
