@@ -1,5 +1,5 @@
 for v in (set -U --names)
-    set --erase "$v"
+    set --erase -U "$v"
 end
 
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
