@@ -3,30 +3,30 @@ for v in (set -U --names)
 end
 
 # Colors
-set -Ux GROFF_NO_SGR 1
+set -U GROFF_NO_SGR 1
 
-set -Ux LESS_TERMCAP_mb \e'[1;35m'       # begin blinking
-set -Ux LESS_TERMCAP_md \e'[1;35m'       # begin bold
-set -Ux LESS_TERMCAP_me \e'[0m'          # end mode
-set -Ux LESS_TERMCAP_so \e'[7m'          # begin standout-mode - info box
-set -Ux LESS_TERMCAP_se \e'[0m'          # end standout-mode
-set -Ux LESS_TERMCAP_us \e'[4;32m'       # begin underline
-set -Ux LESS_TERMCAP_ue \e'[0m'          # end underline
+set -U LESS_TERMCAP_mb \e'[1;35m'       # begin blinking
+set -U LESS_TERMCAP_md \e'[1;35m'       # begin bold
+set -U LESS_TERMCAP_me \e'[0m'          # end mode
+set -U LESS_TERMCAP_so \e'[7m'          # begin standout-mode - info box
+set -U LESS_TERMCAP_se \e'[0m'          # end standout-mode
+set -U LESS_TERMCAP_us \e'[4;32m'       # begin underline
+set -U LESS_TERMCAP_ue \e'[0m'          # end underline
 
 
 # Programming tools
-set -Ux BC_ENV_ARGS "--mathlib $HOME/.bc"
-set -Ux PYTHONSTARTUP "$HOME/.pythonstartup"
-set -Ux PIPENV_SHELL_FANCY 1
-set -Ux RUST_SRC_PATH "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+set -U BC_ENV_ARGS "--mathlib $HOME/.bc"
+set -U PYTHONSTARTUP "$HOME/.pythonstartup"
+set -U PIPENV_SHELL_FANCY 1
+set -U RUST_SRC_PATH "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 
 # Node.js
 set -l npm_packages "$HOME/.npm-packages"
-set -Ux NODE_PATH "$npm_packages/lib/node_modules"
+set -U NODE_PATH "$npm_packages/lib/node_modules"
 set -l additional_paths "$npm_packages/bin" $additional_paths
 
 # Java
-set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
+set -U _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 # Paths
 set -l prepend_paths \
@@ -61,9 +61,9 @@ set -U __done_exclude 'git (?!push|pull|fetch)|^ '
 
 
 # Others
-set -Ux DICTIONARY 'en_US'
-set -Ux FZF_DEFAULT_OPTS '--height=50% --reverse --color=fg:-1,bg:-1,fg+:15,bg+:-1,hl:12,hl+:10,prompt:10,pointer:9,info:13,marker:9,spinner:9,header:9'
-set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
+set -U DICTIONARY 'en_US'
+set -U FZF_DEFAULT_OPTS '--height=50% --reverse --color=fg:-1,bg:-1,fg+:15,bg+:-1,hl:12,hl+:10,prompt:10,pointer:9,info:13,marker:9,spinner:9,header:9'
+set -U _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 
 # Use default values
