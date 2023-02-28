@@ -31,6 +31,7 @@ if status --is-interactive
   # Aliases: Neovim
   alias nview="nvim -R"
   alias nvimdiff="nvim -d"
+  alias nvimlite="nvim --clean --noplugin -c 'syntax off' -c 'set redrawtime=1' -c 'set nowrap'"
 
   # Aliases: Color output
   alias ip="ip -color=auto"
