@@ -25,11 +25,6 @@ set -Ux PYTHONSTARTUP "$HOME/.pythonstartup"
 set -Ux PIPENV_SHELL_FANCY 1
 set -Ux RUST_SRC_PATH "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 
-# Node.js
-set -l npm_packages "$HOME/.npm-packages"
-set -Ux NODE_PATH "$npm_packages/lib/node_modules"
-set -l additional_paths "$npm_packages/bin" $additional_paths
-
 # Java
 set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
