@@ -14,6 +14,11 @@ set -U LESS_TERMCAP_us \e'[4;32m'       # begin underline
 set -U LESS_TERMCAP_ue \e'[0m'          # end underline
 
 
+# Zip
+set -U UNZIP "-O UTF-8"
+set -U ZIPINFO "-O UTF-8"
+
+
 # Programming tools
 set -U BC_ENV_ARGS "--mathlib $HOME/.bc"
 set -U PYTHONSTARTUP "$HOME/.pythonstartup"
