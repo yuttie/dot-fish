@@ -67,5 +67,5 @@ set -Ux _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 
 
 # Use default values
-set -eU GREP_COLOR
-set -eU GREP_COLORS
+set -e GREP_COLOR
+set -e GREP_COLORS
