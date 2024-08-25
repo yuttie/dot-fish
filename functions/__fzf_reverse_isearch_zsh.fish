@@ -8,8 +8,8 @@ function __fzf_reverse_isearch_zsh
   set -l fish_config $config_home/fish
   set -l fish_cache $cache_home/fish
 
-  set -l timestamp (stat -c '%Y' ~/.zsh_history ^/dev/null     # for GNU's stat
-                    or stat -f '%m' ~/.zsh_history ^/dev/null  # for FreeBSD's stat)
+  set -l timestamp (stat -c '%Y' ~/.zsh_history 2>/dev/null     # for GNU's stat
+                    or stat -f '%m' ~/.zsh_history 2>/dev/null  # for FreeBSD's stat)
 
   # Update a cache file if necessary
   if not test -f $fish_cache/decoded_zsh_history-$timestamp
