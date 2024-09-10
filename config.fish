@@ -37,10 +37,10 @@ if status --is-interactive
   alias ip="ip -color=auto"
 
   # Aliases: Misc.
-  alias ls="exa"
-  alias ll="exa -al"
-  alias llt="exa -al --sort modified"
-  alias lls="exa -al --sort size"
+  alias ls="eza"
+  alias ll="eza -al"
+  alias llt="eza -al --sort modified"
+  alias lls="eza -al --sort size"
   alias xd="od -x"
 
   # Key bindings
