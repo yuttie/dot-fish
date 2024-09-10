@@ -59,9 +59,10 @@ if status --is-interactive
   end
   fish_hybrid_key_bindings
 
+  # Starship
+  starship init fish | source
+
   # Keychain
   # https://bugs.funtoo.org/browse/FL-2006
   keychain --eval --quiet --quick id_ed25519 | string replace 'set -x -U' 'set -x -g' | source
 end
-
-starship init fish | source
