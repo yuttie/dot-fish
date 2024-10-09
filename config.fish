@@ -56,6 +56,16 @@ if status --is-interactive
       bind -M insert \et 'commandline -i "(date +%Y-%m-%d-%H%M%S)"'
       bind -M insert \eq 'push-line'
     end
+
+    # https://github.com/fish-shell/fish-shell/issues/7203#issuecomment-660063522
+    function forget
+      set -l cmd (commandline | string collect)
+      history delete --exact --case-sensitive -- $cmd
+    end
+    bind \cg forget
+    if bind -M insert >/dev/null 2>/dev/null
+      bind -M insert \cg forget
+    end
   end
   fish_hybrid_key_bindings
 
