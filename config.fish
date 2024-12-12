@@ -48,7 +48,7 @@ if status --is-interactive
     # fzf
     if test -f /usr/share/fzf/key-bindings.fish
       source /usr/share/fzf/key-bindings.fish
-    else if /opt/homebrew/opt/fzf/shell/key-bindings.fish
+    else if test -f /opt/homebrew/opt/fzf/shell/key-bindings.fish
       source /opt/homebrew/opt/fzf/shell/key-bindings.fish
     end
     fzf_key_bindings
