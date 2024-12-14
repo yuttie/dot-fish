@@ -35,7 +35,7 @@ set -l prepend_paths \
     ~/.cargo/bin \
     ~/go/bin
 set -l append_paths \
-    (yarn global bin) \
+    $(npm config --global get prefix)/bin \
     $npm_packages/bin
 
 set -U fish_user_paths
