@@ -40,14 +40,14 @@ set -l append_paths \
 
 set -U fish_user_paths
 for d in $prepend_paths[-1..1]
-  if test -d $d
-    set -U fish_user_paths "$d" $fish_user_paths
-  end
+    if test -d $d
+        set -U fish_user_paths "$d" $fish_user_paths
+    end
 end
 for d in $append_paths
-  if test -d $d
-    set -U fish_user_paths $fish_user_paths "$d"
-  end
+    if test -d $d
+        set -U fish_user_paths $fish_user_paths "$d"
+    end
 end
 
 
