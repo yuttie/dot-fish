@@ -1,3 +1,3 @@
 function rgl
-    rg --color=always --heading --line-number $argv | less -R
+    rg --pretty $argv | less -R
 end
