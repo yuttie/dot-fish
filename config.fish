@@ -54,10 +54,10 @@ if status --is-interactive
         fzf_key_bindings
 
         # My own bindings
-        bind \et 'commandline -i "(date +%Y-%m-%d-%H%M%S)"'
+        bind \et 'commandline -i "\$(date +%Y-%m-%d-%H%M%S)"'
         bind \eq 'push-line'
         if bind -M insert >/dev/null 2>/dev/null
-            bind -M insert \et 'commandline -i "(date +%Y-%m-%d-%H%M%S)"'
+            bind -M insert \et 'commandline -i "\$(date +%Y-%m-%d-%H%M%S)"'
             bind -M insert \eq 'push-line'
         end
 
