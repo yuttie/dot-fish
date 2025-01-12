@@ -75,6 +75,10 @@ if status --is-interactive
     end
     fish_hybrid_key_bindings
 
+    # uv
+    uv generate-shell-completion fish | source
+    uvx --generate-shell-completion fish | source
+
     # Starship
     starship init fish | source
 
