@@ -89,7 +89,9 @@ if status --is-interactive
 
     # Keychain
     # https://bugs.funtoo.org/browse/FL-2006
-    keychain --eval --quiet --quick id_ed25519 | string replace 'set -x -U' 'set -x -g' | source
+    if type -q keychain
+        keychain --eval --quiet --quick id_ed25519 | string replace 'set -x -U' 'set -x -g' | source
+    end
 
     # Jumping between prompts (in collaboration with supported terminal, e.g. foot)
     function mark_prompt_start --on-event fish_prompt
