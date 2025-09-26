@@ -59,6 +59,7 @@ if status --is-interactive
         fzf_key_bindings
 
         # My own bindings
+        bind -M insert ctrl-n down-or-search
         bind \et 'commandline -i "\$(date +%Y-%m-%d-%H%M%S)"'
         bind \eT 'commandline -i "$(date +%Y-%m-%d-%H%M%S)"'
         bind \eq 'push-line'
