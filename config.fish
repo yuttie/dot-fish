@@ -91,7 +91,7 @@ if status --is-interactive
     # Keychain
     # https://bugs.funtoo.org/browse/FL-2006
     if type -q keychain
-        keychain --eval --quiet --quick --timeout 10 id_ed25519 | string replace 'set -x -U' 'set -x -g' | source
+        keychain --eval --quiet --quick --timeout 10 --noask id_ed25519 | string replace 'set -x -U' 'set -x -g' | source
     end
 
     # Jumping between prompts (in collaboration with supported terminal, e.g. foot)
