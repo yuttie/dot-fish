@@ -85,9 +85,6 @@ if status --is-interactive
     uv generate-shell-completion fish | source
     uvx --generate-shell-completion fish | source
 
-    # Starship
-    starship init fish | source
-
     # Keychain
     # https://bugs.funtoo.org/browse/FL-2006
     if type -q keychain
@@ -107,4 +104,7 @@ if status --is-interactive
     function foot_cmd_end --on-event fish_postexec
         echo -en "\e]133;D\e\\"
     end
+
+    # Starship
+    starship init fish | source
 end
