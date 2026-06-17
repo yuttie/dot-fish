@@ -23,6 +23,7 @@ end
 
 if status --is-interactive
     # Theme
+    fish_config theme choose "Rosé Pine Auto"
     set -g fish_prompt_pwd_dir_length 1
     set -g theme_display_user yes
     set -g default_user yuta
