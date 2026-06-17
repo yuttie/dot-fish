@@ -45,18 +45,8 @@ if status --is-interactive
 
     # Key bindings
     function fish_user_key_bindings
-        # fzf
-        # In Arch Linux, key-bindings.fish is installed as
-        # /usr/share/fish/vendor_functions.d/fzf_key_bindings.fish and seems to
-        # be sourced automatically.
-        if test -f /usr/share/fzf/key-bindings.fish  # Gentoo
-            source /usr/share/fzf/key-bindings.fish
-        else if test -f /usr/share/doc/fzf/examples/key-bindings.fish  # Ubuntu
-            source /usr/share/doc/fzf/examples/key-bindings.fish
-        else if test -f /opt/homebrew/opt/fzf/shell/key-bindings.fish  # macOS
-            source /opt/homebrew/opt/fzf/shell/key-bindings.fish
-        end
-        fzf_key_bindings
+        # Set up fzf key bindings
+        fzf --fish | source
 
         # My own bindings
         bind -M insert ctrl-n down-or-search
