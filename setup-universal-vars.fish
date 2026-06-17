@@ -34,9 +34,11 @@ set -l prepend_paths \
     ~/.poetry/bin \
     ~/.cargo/bin \
     ~/go/bin
-set -l append_paths \
-    $(npm config --global get prefix)/bin \
-    $npm_packages/bin
+if command -q npm
+    set -l append_paths \
+        $(npm config --global get prefix)/bin \
+        $npm_packages/bin
+end
 
 set -U fish_user_paths
 for d in $prepend_paths[-1..1]
