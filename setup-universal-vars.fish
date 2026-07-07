@@ -35,7 +35,7 @@ set -l prepend_paths \
     ~/.cargo/bin \
     ~/go/bin
 if command -q npm
-    set -l append_paths \
+    set -l prepend_paths \
         $(npm config --global get prefix)/bin \
         $npm_packages/bin
 end
