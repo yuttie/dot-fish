@@ -65,8 +65,6 @@ set -U __done_exclude 'git (?!push|pull|fetch)|^ '
 # Others
 set -U DICTIONARY 'en_US'
 set -U FZF_DEFAULT_OPTS '--no-separator --reverse --color=fg:-1,bg:-1,fg+:15,bg+:0,hl:6,hl+:14,prompt:10,pointer:9,info:4,marker:9,spinner:9,header:9'
-set -U OOO_DISABLE_RECOVERY 1
-set -U GQ_NEW_INSTANCE yes
 
 
 # Use default values
