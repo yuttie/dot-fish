@@ -32,8 +32,8 @@ set -U _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd'
 set -l prepend_paths \
     ~/.local/bin \
     ~/.poetry/bin \
-    ~/.cargo/bin \
-    ~/go/bin
+    ~/.cargo/bin
+command -q go && set -l prepend_paths $(go env GOPATH)/bin
 command -q npm && set -l prepend_paths $(npm config --global get prefix)/bin
 
 set -U fish_user_paths
