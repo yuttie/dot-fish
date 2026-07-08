@@ -33,8 +33,8 @@ set -l prepend_paths \
     ~/.local/bin \
     ~/.poetry/bin \
     ~/.cargo/bin
-command -q go && set -l prepend_paths $prepend_paths $(go env GOPATH)/bin
-command -q npm && set -l prepend_paths $prepend_paths $(npm config --global get prefix)/bin
+command -q go && test -n "$(go env GOPATH)" && set -l prepend_paths $prepend_paths $(go env GOPATH)/bin
+command -q npm && test -n "$(npm config --global get prefix)" && set -l prepend_paths $prepend_paths $(npm config --global get prefix)/bin
 
 set -U fish_user_paths
 for d in $prepend_paths[-1..1]
