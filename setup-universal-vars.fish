@@ -37,17 +37,18 @@ command -q go && test -n "$(go env GOPATH)" && set -l prepend_paths $prepend_pat
 command -q npm && test -n "$(npm config --global get prefix)" && set -l prepend_paths $prepend_paths "$(npm config --global get prefix)/bin"
 set -l append_paths
 
-set -U fish_user_paths
+set -l paths
 for d in $prepend_paths[-1..1]
     if test -d "$d"
-        set -U fish_user_paths "$d" $fish_user_paths
+        set paths "$d" $paths
     end
 end
 for d in $append_paths
     if test -d "$d"
-        set -U fish_user_paths $fish_user_paths "$d"
+        set paths $paths "$d"
     end
 end
+set -U fish_user_paths $paths
 
 
 # Universal variables for fish Plugins
