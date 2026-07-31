@@ -1,5 +1,10 @@
 function encrypt
-    for f in $argv
-        gpg --output $f.gpg --cipher-algo AES256 -z 0 --symmetric $f
+    if test $(count $argv) -eq 0
+        # No args: read stdin, write to stdout
+        gpg --symmetric --cipher-algo AES256 --no-compress
+    else
+        for f in $argv
+            gpg --symmetric --cipher-algo AES256 --no-compress --output $f.gpg $f
+        end
     end
 end
