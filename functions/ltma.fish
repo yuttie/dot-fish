@@ -14,7 +14,7 @@ function ltma --argument-names session
 
     # Client session
     set -l client_session "$session/client-$fish_pid-$(random)"
-    tmux new-session -t "$session" -s "$client_session"
+    tmux new-session -t "$session" -s "$client_session" $args
     set -l result $status
 
     # Kill the client session
