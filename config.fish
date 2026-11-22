@@ -23,7 +23,7 @@ end
 
 if status --is-interactive
     # Theme
-    fish_config theme choose "Rosé Pine Auto"
+    fish_config theme choose "Rosé Pine Custom"
 
     # Aliases: Neovim
     alias nview="nvim -R"
