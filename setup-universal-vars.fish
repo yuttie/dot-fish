@@ -55,7 +55,7 @@ set -U fish_user_paths $paths
 set -U FZF_TMUX 1
 set -U FZF_TMUX_OPTS '-p 80%'
 set -U FZF_CTRL_T_OPTS '--exact'
-set -U FZF_CTRL_R_OPTS '--exact --wrap --with-nth 3.. --bind "alt-t:change-with-nth(1,3..|3..)"'
+set -U FZF_CTRL_R_OPTS '--exact --wrap --with-nth 3.. --bind "alt-t:change-with-nth(1,3..|3..)" --color=fg:strip'
 set -U FZF_ALT_C_OPTS '--exact'
 set -U __done_exclude 'git (?!push|pull|fetch)|^ '
 
